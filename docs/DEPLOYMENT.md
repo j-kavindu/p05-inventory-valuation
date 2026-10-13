@@ -33,9 +33,13 @@ These checks require your configured project and were not run here:
 - A backup export/import round trip and CSV opening in your target spreadsheet application.
 - Desktop (1440×1000) and phone (390×844) navigation, dialogs, horizontal table scroll, keyboard focus, and no console errors.
 
-## Native Sites publication
+## GitHub Pages
 
-The working tree also includes `.openai/hosting.json` for its registered private Sites deployment. Source is synchronized to that Site's repository. For a new unrelated deployment, do not reuse this Site identity; Firebase does not use this file.
+This repository publishes through `.github/workflows/pages.yml`. In Settings → Pages, the source is **GitHub Actions**. Each push to `main` runs `npm ci`, the separate valuation tests, and the TypeScript/Vite production build before deploying `dist/`. A failed test or build blocks that deployment. The workflow can also be run manually from Actions.
+
+The public demo runs in browser-local mode. The workflow currently does not supply Firebase configuration; enable it only after configuring your project and authorized domains as described above. The code uses relative asset URLs so it works under the repository's Pages subdirectory.
+
+The original private Sites deployment is separate. Its hosting identity was intentionally omitted from this portable GitHub repository.
 
 ## Browser data and operations
 
