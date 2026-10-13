@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "products": [
+    {
+      "id": "NB-001",
+      "name": "Classic notebook",
+      "category": "Stationery",
+      "unit": "pcs",
+      "reorder": 40
+    },
+    {
+      "id": "PN-002",
+      "name": "Gel pen set",
+      "category": "Stationery",
+      "unit": "sets",
+      "reorder": 30
+    },
+    {
+      "id": "FL-003",
+      "name": "Document folder",
+      "category": "Office supplies",
+      "unit": "pcs",
+      "reorder": 25
+    },
+    {
+      "id": "MG-004",
+      "name": "Ceramic mug",
+      "category": "Accessories",
+      "unit": "pcs",
+      "reorder": 15
+    }
+  ],
+  "movements": [
+    {
+      "id": "OP-001",
+      "productId": "NB-001",
+      "date": "2026-10-01",
+      "kind": "opening",
+      "quantity": "100",
+      "unitCost": "420",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "OP-002",
+      "productId": "PN-002",
+      "date": "2026-10-01",
+      "kind": "opening",
+      "quantity": "80",
+      "unitCost": "650",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "OP-003",
+      "productId": "FL-003",
+      "date": "2026-10-01",
+      "kind": "opening",
+      "quantity": "60",
+      "unitCost": "280",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "OP-004",
+      "productId": "MG-004",
+      "date": "2026-10-01",
+      "kind": "opening",
+      "quantity": "40",
+      "unitCost": "950",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "PO-001",
+      "productId": "NB-001",
+      "date": "2026-10-03",
+      "kind": "purchase",
+      "quantity": "80",
+      "unitCost": "460",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "SL-001",
+      "productId": "NB-001",
+      "date": "2026-10-04",
+      "kind": "sale",
+      "quantity": "120",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "SL-002",
+      "productId": "PN-002",
+      "date": "2026-10-05",
+      "kind": "sale",
+      "quantity": "60",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "PO-002",
+      "productId": "FL-003",
+      "date": "2026-10-06",
+      "kind": "purchase",
+      "quantity": "40",
+      "unitCost": "310",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "SL-003",
+      "productId": "FL-003",
+      "date": "2026-10-07",
+      "kind": "sale",
+      "quantity": "55",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "PO-003",
+      "productId": "MG-004",
+      "date": "2026-10-08",
+      "kind": "purchase",
+      "quantity": "20",
+      "unitCost": "1020",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "SR-001",
+      "productId": "NB-001",
+      "date": "2026-10-09",
+      "kind": "sale_return",
+      "quantity": "5",
+      "reference": "SL-001",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "PR-001",
+      "productId": "FL-003",
+      "date": "2026-10-10",
+      "kind": "purchase_return",
+      "quantity": "5",
+      "reference": "PO-002",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "SL-004",
+      "productId": "MG-004",
+      "date": "2026-10-11",
+      "kind": "sale",
+      "quantity": "48",
+      "note": "Synthetic demo transaction"
+    },
+    {
+      "id": "PO-004",
+      "productId": "PN-002",
+      "date": "2026-10-12",
+      "kind": "purchase",
+      "quantity": "8",
+      "unitCost": "700",
+      "note": "Synthetic demo transaction"
+    }
+  ]
+}

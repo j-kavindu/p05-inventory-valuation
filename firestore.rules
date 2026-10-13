@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  match /users/{uid}/inventory/workspace {
+   allow read: if request.auth != null && request.auth.uid == uid;
+   allow create: if request.auth != null && request.auth.uid == uid && valid() && request.resource.data.revision == 1;
+   allow update: if request.auth != null && request.auth.uid == uid && valid() && request.resource.data.revision == resource.data.revision + 1;
+   allow delete: if false;
+   function valid() {
+    return request.resource.data.keys().hasOnly(['data','revision','updatedAt'])
+      && request.resource.data.revision is int && request.resource.data.updatedAt is string
+      && request.resource.data.data.keys().hasOnly(['version','products','movements'])
+      && request.resource.data.data.version == 1
+      && request.resource.data.data.products is list && request.resource.data.data.products.size() <= 200
+      && request.resource.data.data.movements is list && request.resource.data.data.movements.size() <= 2000;
+   }
+  }
+ }
+}

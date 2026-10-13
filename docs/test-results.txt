@@ -1,0 +1,38 @@
+
+> p05-stockwise@1.0.0 test
+> node --import tsx --test tests/*.test.ts
+
+✔ FIFO perpetual independently calculated closing 160, COGS 140 (9.908575ms)
+✔ moving average closes at 137.142857 with COGS 162.857143 (0.501254ms)
+✔ periodic weighted average differs: closing 120, COGS 180 (0.286942ms)
+✔ periodic FIFO closing uses latest receipts (0.25235ms)
+✔ negative stock rejected even if a later receipt covers it (0.477289ms)
+✔ sale return reverses original issue cost (0.379531ms)
+✔ moving average return uses original sale cost, not current cost (0.368865ms)
+✔ purchase return original cost and lot reduction (0.182996ms)
+✔ over-returns aggregate partial returns (0.444198ms)
+✔ return must link correct prior type (0.379972ms)
+✔ FIFO consumed purchase layer cannot be returned (0.318229ms)
+✔ periodic returns net purchases and sales (0.294944ms)
+✔ fractional units do not use binary floating point (0.201643ms)
+✔ empty ledger (0.085589ms)
+✔ full depletion zeros value (0.350197ms)
+✔ zero cost items allowed (0.18594ms)
+✔ zero and negative quantities rejected (0.583018ms)
+✔ opening must precede activities (0.315395ms)
+✔ duplicate transaction IDs rejected (0.193862ms)
+✔ date cutoff excludes later movements (0.160341ms)
+✔ invalid dates rejected (0.11989ms)
+✔ backdated negative movement rejected on replay (0.126951ms)
+✔ all demo methods reconcile available cost = COGS + ending (4.282506ms)
+✔ CSV neutralizes spreadsheet formulas and quotes strings (0.182255ms)
+✔ cross-product reference rejected by dataset validation (0.272921ms)
+✔ average invoice return cannot create value without stock (0.171308ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 238.608991
