@@ -1,13 +1,13 @@
 # Screenshots
 
-No screenshots are included: the required managed browser-control capability was unavailable during this build. Concept images or source renders are not substituted for real application screenshots.
+![Live Stockwise overview](screenshots/overview.jpg)
 
-After deployment, capture:
+Captured on 2026-10-13 from the [public GitHub Pages demo](https://j-kavindu.github.io/p05-inventory-valuation/), using the synthetic dataset and perpetual FIFO. This is a real desktop browser screenshot.
 
-1. Overview: desktop 1440×1000, FIFO + perpetual, cutoff 2026-10-31, synthetic demo.
-2. Stock cards: Classic notebook, showing FIFO layers and linked return.
-3. Valuation: all four methods side by side.
-4. Phone overview: viewport 390×844, navigation and responsive summary cards.
-5. Add movement: a negative-stock attempt displaying the validation error.
+Additional acceptance captures still to complete:
+- Stock cards with FIFO layers and a linked return.
+- All four valuation methods side by side.
+- Phone overview at 390×844 with navigation and responsive summary cards.
+- Negative-stock validation in the movement dialog.
 
-Use the deployment guide to run the app locally and capture these from a real browser.
+See DEPLOYMENT.md for local and Firebase setup.

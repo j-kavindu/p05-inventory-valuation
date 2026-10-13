@@ -12,9 +12,17 @@ The test suite includes independent hand-calculated FIFO, moving-average and per
 
 The initial `tsx` command failed because this runtime does not permit its IPC pipe. The committed test command uses `node --import tsx --test` and successfully runs the same tests without the CLI IPC server.
 
+## Live deployment verification
+
+On 2026-10-13, [GitHub Actions run 38327249966](https://github.com/j-kavindu/p05-inventory-valuation/actions/runs/38327249966) completed successfully, including dependency installation, valuation tests, production build and GitHub Pages deployment.
+
+The [live app](https://j-kavindu.github.io/p05-inventory-valuation/) was opened in a desktop browser. The synthetic dashboard rendered with four products and 14 movements. Perpetual FIFO showed closing inventory LKR 72,823.33 and net COGS LKR 149,626.67. Switching to weighted average and the periodic system updated these to LKR 70,104.93 and LKR 152,345.07. A real screenshot is stored at `docs/screenshots/overview.jpg`.
+
+This is a limited desktop smoke check, not complete browser acceptance testing.
+
 ## Not executed
 
-- Browser functional/visual QA and screenshot capture: the required managed browser-control capability is unavailable. Per Sites workflow, no alternative browser automation or preview server was improvised.
+- Complete browser functional/visual QA, mobile viewport testing, and all deployment acceptance scenarios. Initial Sites preview verification was unavailable; the later public GitHub Pages desktop smoke check is recorded above.
 - Live Google sign-in, Firestore round-trip, Firebase hosting deployment, and security-rule emulator tests: no user Firebase project configuration was provided.
 - Financial compliance audit, external accountant review, NRV or statutory reporting validation.
 

@@ -2,6 +2,10 @@
 
 React + TypeScript + Firebase-ready inventory costing MVP, created for Kavindu's accounting portfolio. Includes synthetic demo records. No verified financial compliance claim.
 
+[Open live demo](https://j-kavindu.github.io/p05-inventory-valuation/) · [Deployment workflow](https://github.com/j-kavindu/p05-inventory-valuation/actions/runs/38327249966)
+
+![Stockwise live desktop dashboard](docs/screenshots/overview.jpg)
+
 ## Run
 
 Node.js 22.12+ (tested on 24.19) and npm:
@@ -48,7 +52,7 @@ The report end date initially covers the demo month. Change it when entering tra
 
 ## Verification
 
-`npm test`: 26 passing tests. `npm run build`: TypeScript and Vite production build passed. Browser rendering, screenshots, deployed Firebase authentication, Firestore rules emulator tests and cloud round trips were **not verified** in the build environment. See `docs/VERIFICATION.md`; do not represent these as tested.
+`npm test`: 26 passing tests. `npm run build`: TypeScript and Vite production build passed. GitHub Actions successfully tested, built and deployed the app to GitHub Pages. A live desktop smoke check verified dashboard rendering and switching from perpetual FIFO to periodic weighted average; the screenshot above is from the deployed app. Mobile browser QA, deployed Firebase authentication, Firestore rules emulator tests and cloud round trips remain **unverified**. See `docs/VERIFICATION.md`.
 
 ## Limitations
 
